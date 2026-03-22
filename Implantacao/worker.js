@@ -10,7 +10,7 @@ export default {
     
     // Configurar CORS (Permite que apenas seu site acesse este Worker)
     const corsHeaders = {
-      'Access-Control-Allow-Origin': 'https://seusite.pages.dev', // ⚠️ MUDE ISSO PARA SEU DOMÍNIO FINAL
+      'Access-Control-Allow-Origin': 'https://redecredenciadasc.pages.dev',  // Domínio do Pages (sem aspas extras!)
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, X-Auth-Token',
     };
@@ -62,7 +62,7 @@ export default {
 
     // Primeiro, buscamos o mapa_arquivos.json no R2 para saber a estrutura
     // 'BUCKET' é o nome da ligação que faremos no painel da Cloudflare depois
-    const mapObject = await env.BUCKET.get('output_shards/mapa_arquivos.json');
+    const mapObject = await env.BUCKET.get('output_shards/mapa_para_site.json');
     
     if (!mapObject) {
       return new Response(JSON.stringify({ error: 'Erro interno: Mapa não encontrado' }), { status: 500, headers: corsHeaders });

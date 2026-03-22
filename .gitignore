@@ -1,0 +1,35 @@
+# =============================================================
+# Arquivos de dados sensíveis / pesados — NÃO versionar
+# =============================================================
+
+# Banco de dados consolidado (pode ter centenas de MB)
+rede_credenciada_final.json
+
+# Mapa do frontend (gerado localmente pelo sharding.py)
+mapa_para_site_front.json
+
+# =============================================================
+# Arquivos temporários do Python
+# =============================================================
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+
+# =============================================================
+# Arquivos de sistema
+# =============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# =============================================================
+# Arquivos de ambiente e segredos
+# =============================================================
+.env
+.env.local
+*.secret
